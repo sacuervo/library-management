@@ -1,5 +1,6 @@
 package me.santiagocuervo.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import me.santiagocuervo.exception.NotFoundException;
@@ -8,6 +9,10 @@ import me.santiagocuervo.model.Book;
 public class BookService {
 
     private List<Book> books;
+
+    public BookService() {
+        this.books = new ArrayList<>();
+    }
 
     public void addBook(String isbn, String title, String author) {
         books.add(new Book(isbn, title, author));
