@@ -1,10 +1,5 @@
 package me.santiagocuervo.model;
 
-public class User {
-
-}
-package me.santiagocuervo.model;
-
 import java.time.LocalDate;
 
 public class User {
