@@ -33,4 +33,18 @@ public class UserService {
         throw new NotFoundException(String.format("El usuario con ID '%s', no ha sido encontrado.", id));
     }
 
+    public void updateUserEmail(String id, String email) {
+        var user = getUserById(id);
+        user.setEmail(email);
+    }
+
+    public void updateUserName(String id, String name) {
+        var user = getUserById(id);
+        user.setName(name);
+    }
+
+    public void deleteUser(String id) {
+        var user = getUserById(id);
+        users.remove(user);
+    }
 }
