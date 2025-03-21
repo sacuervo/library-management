@@ -22,7 +22,7 @@ public class BookService {
         return books;
     }
 
-    public Book getBookByIsbn(String isbn) throws NotFoundException {
+    public Book getBookByIsbn(String isbn){
         for (var book : books) {
             if (book.getIsbn().equals(isbn)) {
                 return book;
@@ -32,7 +32,7 @@ public class BookService {
         throw new NotFoundException(String.format("El libro con ISBN '%s', no ha sido encontrado.", isbn));
     }
 
-    public void deleteBook(String isbn) throws NotFoundException {
+    public void deleteBook(String isbn) {
         for (var book : books) {
             if (book.getIsbn().equals(isbn)) {
                 books.remove(book);
